@@ -72,8 +72,8 @@ send "$token\r"
 # Ждем сообщения о Minecraft
 expect "Please press ENTER when two Minecraft windows have opened"
 
-# Ждем 30-60 секунд для загрузки окон
-set wait_time [expr {30 + int(rand()*31)}]
+# Ждем 21 секунду для загрузки окон
+set wait_time [expr {20 + int(rand()*1)}]
 puts "\nЖдем загрузку Minecraft окон ($wait_time секунд)..."
 sleep $wait_time
 
@@ -111,8 +111,8 @@ sleep 3
 # Проверяем что запись началась
 puts "Проверяем начало записи..."
 
-# Генерируем случайное время записи (1-4 минуты)
-set record_time [expr {60 + int(rand()*181)}]
+# Генерируем случайное время записи (1-1,2 минуты)
+set record_time [expr {60 + int(rand()*12)}]
 puts "Записываем геймплей: $record_time секунд..."
 
 # Записываем геймплей
